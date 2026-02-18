@@ -102,6 +102,9 @@
 
   --font-sans: "Inter", sans-serif;
   --font-heading: "Plus Jakarta Sans", sans-serif;
+
+  --font-family-sans: var(--font-sans);
+  --font-family-heading: var(--font-heading);
 }
 
 .dark {
