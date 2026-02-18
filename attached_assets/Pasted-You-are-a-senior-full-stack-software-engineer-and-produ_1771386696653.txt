@@ -1,0 +1,196 @@
+You are a senior full-stack software engineer and product architect.
+Build a modern **Professional Networking & Messaging Web Application** using Agile principles.
+
+## 🎯 Project Goal
+
+Create a web application where professionals from different fields can connect with people who need their help or services.
+
+Example:
+
+* A college wants a Software Developer for a seminar.
+* They search professionals nearby.
+* They connect, message, and collaborate.
+
+This platform combines:
+
+* Professional networking
+* Messaging system
+* Blogging platform
+* Location-based professional discovery
+
+---
+
+## 🧱 Tech Stack (Use Modern Industry Standards)
+
+Frontend:
+
+* Next.js (App Router)
+* React
+* TypeScript
+* Tailwind CSS
+* Shadcn UI components
+* Responsive + modern UI
+
+Backend:
+
+* Node.js + Express OR Next.js API routes
+* REST API architecture
+* JWT Authentication
+
+Database:
+
+* PostgreSQL (preferred) OR MongoDB
+* Prisma ORM
+
+Other Tools:
+
+* Socket.io (real-time messaging)
+* Cloudinary (image upload)
+* Google Maps API or OpenStreetMap (location search)
+
+---
+
+## 👥 User Roles
+
+1. Professional (Developer, Doctor, Designer, Speaker, etc.)
+2. General User / Organization
+
+---
+
+## 🔐 Authentication Features
+
+* Sign up / Login
+* Role selection (Professional / User)
+* Profile creation
+* JWT authentication
+* Secure password hashing
+
+---
+
+## 👤 Profile System
+
+Professional profile should include:
+
+* Name
+* Field/Profession
+* Skills
+* Experience
+* Bio
+* Location
+* Availability
+* Profile photo
+* Portfolio links
+
+---
+
+## 🔎 Search & Discovery
+
+* Search professionals by:
+
+  * Field
+  * Skills
+  * Location (near me)
+* Filter system
+* Professional cards UI
+* View full profile page
+
+---
+
+## 💬 Messaging System (Real-time)
+
+* One-to-one chat
+* Message history
+* Online status
+* Chat UI like modern messaging apps
+* Socket.io implementation
+
+---
+
+## 📝 Blog System
+
+* Users & professionals can post blogs
+* Create / Edit / Delete posts
+* Like & Comment feature
+* Feed page showing latest blogs
+
+---
+
+## ⭐ Connection System
+
+* Send connection request
+* Accept / Reject
+* Connected users list
+
+---
+
+## 🎨 UI/UX Requirements
+
+* Modern SaaS-style UI
+* Dark/Light mode toggle
+* Smooth animations
+* Mobile responsive
+* Interactive dashboard
+* Clean card-based design
+* Professional color theme
+
+Pages Required:
+
+* Landing Page
+* Login/Register
+* Dashboard
+* Profile Page
+* Search Professionals
+* Messaging Page
+* Blog Feed
+* Create Blog
+* Settings
+
+---
+
+## 🧩 Agile Development Structure
+
+Follow Agile methodology:
+
+1. Break project into features (user stories)
+2. Create modular components
+3. Use reusable UI components
+4. Clean folder structure
+5. Scalable architecture
+
+---
+
+## 📂 Folder Structure
+
+Generate production-ready folder structure.
+
+Example:
+
+* /app
+* /components
+* /lib
+* /api
+* /models
+* /services
+* /hooks
+
+---
+
+## ⚡ Extra Features (If possible)
+
+* Notifications system
+* Bookmark professionals
+* Rating & reviews
+* Seminar request feature
+* Email notification
+
+---
+
+## 🚀 Output Requirements
+
+1. Generate complete working code.
+2. Explain how to run locally.
+3. Provide database schema.
+4. Provide API routes explanation.
+5. Add sample dummy data.
+
+Build step-by-step and ensure the project runs successfully.
