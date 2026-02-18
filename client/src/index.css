@@ -1,9 +1,17 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Dark variant */
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
+/* =========================
+   TAILWIND THEME (FIXED)
+   ========================= */
+@theme {
+  /* ✅ FONT UTILITIES (MAIN FIX) */
+  --font-sans: var(--font-family-sans);
+  --font-heading: var(--font-family-heading);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -53,8 +61,10 @@
   --color-sidebar-ring: hsl(var(--sidebar-ring));
 }
 
+/* =========================
+   LIGHT THEME
+   ========================= */
 :root {
-  /* Clean Professional Theme - Blue/Slate */
   --background: 210 40% 98%;
   --foreground: 222 47% 11%;
 
@@ -64,7 +74,7 @@
   --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
 
-  --primary: 221 83% 53%; /* Professional Blue */
+  --primary: 221 83% 53%;
   --primary-foreground: 210 40% 98%;
 
   --secondary: 210 40% 96.1%;
@@ -100,6 +110,7 @@
   --sidebar-border: 220 13% 91%;
   --sidebar-ring: 217.2 91.2% 59.8%;
 
+  /* Fonts */
   --font-sans: "Inter", sans-serif;
   --font-heading: "Plus Jakarta Sans", sans-serif;
 
@@ -107,6 +118,9 @@
   --font-family-heading: var(--font-heading);
 }
 
+/* =========================
+   DARK MODE
+   ========================= */
 .dark {
   --background: 222 47% 11%;
   --foreground: 210 40% 98%;
@@ -136,12 +150,6 @@
   --input: 217.2 32.6% 17.5%;
   --ring: 224.3 76.3% 48%;
 
-  --chart-1: 220 70% 50%;
-  --chart-2: 160 60% 45%;
-  --chart-3: 30 80% 55%;
-  --chart-4: 280 65% 60%;
-  --chart-5: 340 75% 55%;
-
   --sidebar: 240 5.9% 10%;
   --sidebar-foreground: 240 4.8% 95.9%;
   --sidebar-primary: 224.3 76.3% 48%;
@@ -152,14 +160,24 @@
   --sidebar-ring: 217.2 91.2% 59.8%;
 }
 
+/* =========================
+   BASE STYLES
+   ========================= */
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading tracking-tight;
   }
 }
