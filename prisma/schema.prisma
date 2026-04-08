@@ -1,0 +1,71 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      String   // student / professional / college
+  createdAt DateTime @default(now())
+  professional Professional? 
+
+  proposals Proposal[]
+}
+model Professional {
+  id         String   @id @default(cuid())
+  userId     String    @unique
+  domain     String
+  experience Int
+  bio        String
+  location   String
+  createdAt  DateTime @default(now())
+  proposals  Proposal[]
+  skills    Skill[]
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model Proposal {
+  id             String   @id @default(cuid())
+  senderId       String
+  professionalId String
+  message        String
+  status         String   @default("pending") // pending, accepted, rejected
+  createdAt      DateTime @default(now())
+
+  sender       User         @relation(fields: [senderId], references: [id])
+  professional Professional @relation(fields: [professionalId], references: [id])
+}
+
+model Message {
+  id          String   @id @default(cuid())
+  senderId    String
+  receiverId  String
+  proposalId  String
+  content     String
+  type      String   @default("TEXT") // "TEXT", "IMAGE", "FILE"
+  createdAt   DateTime @default(now())
+ 
+}
+
+model Skill {
+  id String @id @default(cuid())
+  name String
+  endorsements   Int  @default(0)
+  professionalId String 
+  professional Professional @relation(fields: [professionalId], references:[id])
+}
